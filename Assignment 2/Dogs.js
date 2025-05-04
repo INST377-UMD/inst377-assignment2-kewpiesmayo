@@ -1,3 +1,5 @@
+
+//GETS random dog pictures and puts them int othe carousel
 function loadDogCarousel() {
     fetch("https://dog.ceo/api/breeds/image/random/10")
       .then(response => response.json())
@@ -20,6 +22,7 @@ loadDogCarousel();
 
 let loadedBreeds = [];
 
+//GETS dog data to create button that displays the dog's info
 function LoadDogButtons(){
     fetch("https://dogapi.dog/api/v2/breeds")
       .then(res => res.json())
@@ -37,7 +40,8 @@ function LoadDogButtons(){
         });
       });
   };
-  
+
+//Writes dog info into webpage
 function showBreedInfo(breed) {
     document.getElementById("breedName").innerText = breed.attributes.name;
     document.getElementById("description").innerText = breed.attributes.description;
@@ -51,18 +55,19 @@ document.addEventListener("DOMContentLoaded", function () {
     LoadDogButtons();
 });
 
+//Voice Command to load dog breed
 function voiceLoadBreed(breedvoice) {
     const match = loadedBreeds.find(breed =>
       breed.attributes.name.toLowerCase().includes(breedvoice.toLowerCase())
     );
     showBreedInfo(match);
 }
-  if (annyang) {
-    const stockcommands = {
-      'Load Dog Breed *breedvoice': voiceLoadBreed
-    };
+if (annyang) {
+  const stockcommands = {
+    'Load Dog Breed *breedvoice': voiceLoadBreed
+  };
   
-    annyang.addCommands(stockcommands);
-  }
+  annyang.addCommands(stockcommands);
+}
   
   

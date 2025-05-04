@@ -1,5 +1,6 @@
-let chart; // define globally
+let chart;
 
+//Finds and Displays Chart of Specified Stock Ticker (Type and Voice input)
 function LookupStock(voiceTicker = null) {
     let ticker = null;
     if(voiceTicker == null){
@@ -12,6 +13,7 @@ function LookupStock(voiceTicker = null) {
     getStock(ticker, days);
 }
 
+//GETS stock data from specified stock ticker and days
 async function getStock(ticker, days) {
     const polyKey = '1br5ZJTydpsiPZHScZtFtWlLFaCy3Z3O';
     let endDate = new Date();
@@ -37,6 +39,7 @@ async function getStock(ticker, days) {
         })
 }
 
+//Creates the chart given the data and tickers
 function createChart(labels, data, ticker) {
     const ctx = document.getElementById("myChart");
 
@@ -70,7 +73,7 @@ function createChart(labels, data, ticker) {
     document.getElementById("chartarea").style.visibility = "visible";
 }
 
-
+//GETS trade info from API and displays them dynamically into table
 async function loadRedditStocks() {
     const response = await fetch("https://tradestie.com/api/v1/apps/reddit?date=2022-04-03");
     const data = await response.json();

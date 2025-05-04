@@ -1,5 +1,5 @@
 
-
+//GETS random quote from API
 function randomQuote(){
     fetch('https://zenquotes.io/api/random')
     .then(result => result.json())
@@ -12,8 +12,4 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-
-/*
-Stock Related Functions
-*/
 
