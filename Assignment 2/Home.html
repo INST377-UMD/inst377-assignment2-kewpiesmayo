@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <h1>INST377 - Activities</h1>
+    <nav id="navbar">
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Stocks.html">Stocks</a></li>
+            <li><a href="Dogs.html">Dogs</a></li>
+        </ul>
+    </nav>
+    <h1>Things to Try:</h1>
+    <div id="navbuttons">
+        <a href="Stocks.html"><button class="button-50" role="button">Stocks</button></a>
+        <a href="Dogs.html"><button class="button-50" role="button">Dogs</button></a>   
+    </div>
+
+
+    <div id="quoteBox">
+        <h2>Quote of the Page Load</h2>
+        <p id="quote"></p>
+    </div>
+
+    <footer>
+        <div id="audio">
+            <h2>Jarvis Voice Activation Is Available</h2>
+
+            <p>Microphone must be enabled to use this feature.</p>
+
+            <ul>
+                <li>Navigate To A Different Page
+                    <ul><li>Say: <b>Navigate to &lt;page&gt;</b></li></ul>
+                </li>
+                <li>Navigate To A Different Page
+                    <ul><li>Say: <b>Change the color to &lt;color&gt;</b></li></ul>
+                </li>
+                <li>Change the Page Color
+                    <ul><li>Say: <b>Hello</b></li></ul>
+                </li>
+            </ul>
+            <div id="audioButtons">
+                <button class="button-50" id="AudioOn" onclick="annyangStart()">Turn On Listening</button>
+                <button class="button-50" id="AudioOff" onclick="annyangStop()">Turn Off Listening</button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+    <script src="home.js"></script>
+    <script src="audio.js"></script>
+</body>
+</html>
