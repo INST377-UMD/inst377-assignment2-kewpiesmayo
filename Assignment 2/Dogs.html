@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-slider@1.0.0/dist/simpleslider.min.js"></script>
+
+    <script src="audio.js"></script>
+    <script src="Dogs.js"></script>
+</head>
+<body>
+    <nav id="navbar">
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Stocks.html">Stocks</a></li>
+            <li><a href="Dogs.html">Dogs</a></li>
+        </ul>
+    </nav>
+
+    <div id="carousel" class="slider"></div>
+
+    <div id="breedButtons"></div>
+
+    <div id="breedInfo">
+        <h1 id="breedName"></h1>
+        <h2>Description: <span id="description"></span></h2>
+        <h2>Min Life: <span id="minLife"></span> years</h2>
+        <h2>Max Life: <span id="maxLife"></span> years</h2>
+    </div>
+
+    <footer>
+        <div id="audio">
+            <h2>Jarvis Voice Activation Is Available</h2>
+
+            <p>Microphone must be enabled to use this feature.</p>
+
+            <ul>
+                <li>Navigate To A Different Page
+                    <ul><li>Say: <b>Load dog breed &lt;Dog Breed Name&gt;</b></li></ul>
+                </li>
+                <li>Navigate To A Different Page
+                    <ul><li>Say: <b>Navigate to &lt;page&gt;</b></li></ul>
+                </li>
+                <li>Navigate To A Different Page
+                    <ul><li>Say: <b>Change the color to &lt;color&gt;</b></li></ul>
+                </li>
+                <li>Change the Page Color
+                    <ul><li>Say: <b>Hello</b></li></ul>
+                </li>
+            </ul>
+            <div id="audioButtons">
+                <button class="button-50" id="AudioOn" onclick="annyangStart()">Turn On Listening</button>
+                <button class="button-50" id="AudioOff" onclick="annyangStop()">Turn Off Listening</button>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="audio.js"></script>
+    <script src="Stocks.js"></script>
+</head>
+<body>
+    <nav id="navbar">
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Stocks.html">Stocks</a></li>
+            <li><a href="Dogs.html">Dogs</a></li>
+        </ul>
+    </nav>
+
+    
+
+    <div id="stockArea">
+        <h1>Lookup a Stock</h>
+        <form onsubmit="LookupStock(); return false;">
+            <input type="text" id="tickerInput" placeholder="Enter Stock" required>
+            <br>
+            <select id="daysSelect">
+                <option value="30">Past 30 Days</option>
+                <option value="60">Past 60 Days</option>
+                <option value="90">Past 90 Days</option>
+            </select>
+            <br>
+            <button id="lookupButton" class="button-50">Lookup Stock</button>
+        </form>
+      </div>
+
+    <div id="chartarea">
+        <canvas id="myChart"></canvas>
+    </div>
+
+
+    <h2>Top 5 Reddit Stocks</h2>
+    <table id="redditTable">
+    <thead>
+        <tr>
+        <th>Ticker</th>
+        <th>Comments</th>
+        <th>Sentiment</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+    </table>
+
+
+    <footer>
+        <div id="audio">
+            <h2>Jarvis Voice Activation Is Available</h2>
+
+            <p>Microphone must be enabled to use this feature.
+            </p>
+
+            <ul>
+                <li>Look up a stock
+                    <ul><li>Say: <b>Look up &lt;Stock Ticker&gt;</b></li></ul>
+                </li>
+                <li>Navigate To A Different Page
+                    <ul><li>Say: <b>Navigate to &lt;page&gt;</b></li></ul>
+                </li>
+                <li>Navigate To A Different Page
+                    <ul><li>Say: <b>Change the color to &lt;color&gt;</b></li></ul>
+                </li>
+                <li>Change the Page Color
+                    <ul><li>Say: <b>Hello</b></li></ul>
+                </li>
+            </ul>
+            <div id="audioButtons">
+                <button class="button-50" id="AudioOn" onclick="annyangStart()">Turn On Listening</button>
+                <button class="button-50" id="AudioOff" onclick="annyangStop()">Turn Off Listening</button>
+            </div>
+        </div>
+    </footer>
+
+
+    
+</body>
+</html>
